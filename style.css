@@ -45,6 +45,11 @@ body {
     height: 83px;
 }
 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
 .primary button {
     width: 117px;
     height: 42px;
