@@ -1,8 +1,8 @@
 // Input and convert button
-let inputEl = document.querySelector('#unit-input')
-let btnEl = document.querySelector('#convert-button')
+const inputEl = document.querySelector('#unit-input')
+const btnEl = document.querySelector('#convert-button')
 
-let input = inputEl.value //store the input
+let input = parseInt(inputEl.value) //store the input
 
 // length values
 let meters
@@ -30,4 +30,16 @@ function volumes(input) {
 function masses(input) {
     kilos = Math.round(input * 0.453592 * 1000) / 1000
     pounds = Math.round(input * 2.20462 * 1000) / 1000
+}
+
+// render function
+
+function render() {
+    const lenEl = document.querySelector('#length')
+    const volEl = document.querySelector('#volume')
+    const masEl = document.querySelector('#volume')
+
+    lenEl.textContent = `${input} meters = ${feet} feet | ${input} feet = ${meters} meters`
+    volEl.textContent = `${input} litres = ${gallons} gallons | ${input} gallons = ${litres} litres`
+    masEl.textContent = `${input} kilos = ${pounds} pounds | ${input} pounds = ${kilos} kilos`
 }
